@@ -6,8 +6,10 @@ import muiThemeable from 'material-ui/styles/muiThemeable';
 import compose from 'recompose/compose';
 import { toggleSidebar as toggleSidebarAction } from '../../actions';
 
+const rightIcon = (props) => (<img {...props} alt="" src={'/icons/binstoIcon.png'}/>)
+
 const AppBar = ({ title, toggleSidebar }) => (
-    <MuiAppBar title={title} onLeftIconButtonTouchTap={toggleSidebar} />
+    <MuiAppBar title={title} onLeftIconButtonTouchTap={toggleSidebar} iconElementRight={rightIcon}/>
 );
 
 AppBar.propTypes = {
